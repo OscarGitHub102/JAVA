@@ -531,18 +531,18 @@ public class Exercises
     public static void binario()
     {
         
-        int num, num1, resto, i = 7, posicion = 0;
-        boolean salir = false;
+        int num, num1, resto, i = 7, posicion = 0, j = 0;
+        boolean salir = false, encontrado = false;
         int [] restos = new int[8];
         Scanner sc = new Scanner(System.in);
         
-        System.out.print("Introduzca un valor (con 0 o negativo finaliza): ");
+        System.out.print("Introduzca un valor entre 1 y 255 (con 0 o negativo finaliza): ");
         num = sc.nextInt();
         
         while(num <= 0)
         {
             System.out.println("ERROR. Número no válido");
-            System.out.print("Introduzca un valor (con 0 o negativo finaliza): ");
+            System.out.print("Introduzca un valor entre 1 y 255 (con 0 o negativo finaliza): ");
             num = sc.nextInt();
         }
         
@@ -565,17 +565,16 @@ public class Exercises
             
         }
         
-        
-        for(int j = 0; j < restos.length; j++)
+        while((j < restos.length) && encontrado == false)
         {
             if(restos[j] == 1)
             {
                 posicion = j;
-                j = restos.length;
+                encontrado = true;
             }
+            
+            j++;
         }
-        
-        
         
         System.out.println("");
         System.out.print("El número decimal " +num1+ ", en binario es: ");
