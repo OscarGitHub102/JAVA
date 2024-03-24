@@ -73,7 +73,6 @@ public class NotasAlumnos
         }
         
         return nom;
-        
     }
     
     /**************************************************************/
@@ -172,9 +171,8 @@ public class NotasAlumnos
                 System.out.println("");
             }
             
-            
-            
         }
+        
     }
     
 }
