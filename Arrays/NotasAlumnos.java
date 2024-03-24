@@ -138,7 +138,7 @@ public class NotasAlumnos
             {
                 if(nombres[i].equalsIgnoreCase(nombre))
                 {
-                    int suma = 0, media = 0;
+                    int suma = 0, media;
                     
                     for (int j = 0; j < 3; j++)
                     {
